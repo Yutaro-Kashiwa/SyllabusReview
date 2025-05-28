@@ -26,7 +26,7 @@ for col in df.columns:
         words = values.replace("、", ",").replace("，", ",").split(",")  # 全角カンマを半角に置換して分割
         unique_words.update(word.strip() for word in words)  # 前後の空白を削除
 
-    if col_no in large_cat_no:
+    if (col_no-10) in large_cat_no:
         column_words[col] = sorted(list(unique_words))
         unique_words = set()
 
