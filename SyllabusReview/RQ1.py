@@ -171,16 +171,16 @@ def plot_coverage_by_uni(bools):
 
     # データフレームに変換
     ddd = pd.DataFrame(list(proportions.items()), columns=['University', 'Coverage'])
-
+    sns.set_style('white')
     # 箱ひげ図の描画
     plt.figure(figsize=(12, 8))
     sns.violinplot(y='Coverage', data=ddd)
+    plt.grid(False)
     plt.xticks(fontsize=fontsize)
     plt.yticks(fontsize=fontsize)
     plt.ylim(0, 1)
     # plt.xlabel('Proportion of 1s')
     plt.ylabel('Coverage', fontsize=fontsize)
-    sns.set_style('white')
     # plt.title('Boxplot of Proportion of 1s for Each University')
     plt.yticks([i / 10 for i in range(0, 11)])  # Y軸を0.0〜1.0の範囲で整数ステップに近い表示
     plt.grid(True)
