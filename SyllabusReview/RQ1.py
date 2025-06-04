@@ -154,7 +154,7 @@ def make_keywords_ranking(keywords_list_by_uni, uni_num):
     print("")
     for no in rank:
         keywords = rank[no]
-        print(keywords)
+        # print(keywords)
         print(no, "&", keywords[6], "&", keywords[7], "&", keywords[8], "&", keywords[9], "&", keywords[10], "&", keywords[11], "\\\\")
 def calculate_cover_number(classes_list_by_uni):
     numbers = []
