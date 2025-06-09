@@ -137,12 +137,12 @@ def make_keywords_ranking(keywords_list_by_uni, uni_num):
                 counter.update(keywords_by_category[category])
             keyword_counter[category] = counter
 
-    rank = {1: [], 2: [], 3: [], 4: [], 5: []}
+    rank = {1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: []}
     for category in keyword_counter:
         counter = keyword_counter[category]
         # print("-", category)
         i = 0
-        for word, num in counter.most_common(5):
+        for word, num in counter.most_common(7):
             i+=1
             rank[i].append(word)
             # print(word)
